@@ -1,0 +1,8 @@
+.product-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+  justify-items: center;
+  padding: 1rem;
+}
