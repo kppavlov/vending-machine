@@ -1,5 +1,6 @@
-import "./product.css";
 import { Product } from "../../../types.ts";
+
+import "./product.css";
 
 interface Props {
   id: string;
@@ -27,7 +28,7 @@ export const ProductComponent = ({
     onClick={() => !disabled && onSelect({ id, name, quantity, price })}
   >
     <div>{name}</div>
-    <div>{quantity} pc.</div>
+    <div>{quantity} pcs.</div>
     <div>{price} BGN</div>
   </div>
 );

@@ -13,9 +13,16 @@
   --bg-color-cta: #009645;
   --border-color: rgba(255, 255, 255, 0.87);
   --error-color: orangered;
+
+  --sm: 600px;
+  --md: 900px;
+  --lg: 1200px;
+  --xl: 1800px;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -46,6 +53,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 input[type="number"] {
+  width: inherit;
   -moz-appearance: textfield;
   &.error {
     outline: 2px solid var(--error-color);
@@ -79,5 +87,47 @@ button {
   }
   a:hover {
     color: #747bff;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 0.75rem;
+  }
+
+  .responsive-results-container {
+    flex-direction: column;
+  }
+
+  input {
+    font-size: 0.75rem;
+  }
+
+  button {
+    font-size: 0.75rem;
+    padding: 0.375rem;
+  }
+
+  .product-display {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .product-display {
+    padding: 0.25rem;
+  }
+
+  input {
+    font-size: 0.5rem;
+  }
+
+  body {
+    font-size: 0.5rem;
+  }
+
+  button {
+    font-size: 0.5rem;
+    padding: 0.25rem;
   }
 }

@@ -1,15 +1,20 @@
 import { FormEvent, useState } from "react";
 
-import "./money-input.css";
-
 // HOOKS
 import { useMoney } from "../../../store/money-slice.tsx";
 import { useProduct } from "../../../store/product-slice.tsx";
+import { useSummary } from "../../../store/summary-slice.tsx";
 
 // CONSTANTS
 import { POSSIBLE_DENOMINATIONS } from "../../../constants.ts";
 
+// COMPONENTS
+import { SummaryModal } from "../../summary-modal/summary-modal.tsx";
+
+import "./money-input.css";
+
 export const MoneyInput = () => {
+  const { toggleSummaryModal } = useSummary();
   const { addToTotalAmount, totalAmount, resetMoneyState } = useMoney();
   const { updateProductOnBuy, resetSelectedProduct, selectedProduct } =
     useProduct();
@@ -36,8 +41,8 @@ export const MoneyInput = () => {
   };
 
   const handleBuy = () => {
+    toggleSummaryModal();
     updateProductOnBuy();
-    resetMoneyState();
   };
 
   const handleReset = () => {
@@ -80,6 +85,8 @@ export const MoneyInput = () => {
       >
         Reset
       </button>
+
+      <SummaryModal />
     </form>
   );
 };

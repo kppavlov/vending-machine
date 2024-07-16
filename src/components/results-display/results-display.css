@@ -1,0 +1,45 @@
+.result-display {
+  display: flex;
+  align-items: center;
+  border-top: 2px solid var(--border-color);
+
+  .responsive-results-container {
+    display: flex;
+    width: 100%;
+  }
+
+  .information-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+
+    h4 {
+      margin: 0.25rem;
+    }
+
+    .denomination-count-pair-container {
+      display: flex;
+      gap: 2rem;
+
+      p {
+        margin: 0.25rem;
+      }
+
+      h5 {
+        margin: 0.25rem;
+      }
+
+      .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.result-display h3 {
+  margin-bottom: 0.25rem;
+}

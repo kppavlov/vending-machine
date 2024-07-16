@@ -7,7 +7,7 @@ export const ProductInformation = () => {
     <>
       <div className="information-display">
         <h3>Product</h3>
-        <div>{selectedProduct?.name ?? "No product chosen"}</div>
+        <div>{selectedProduct?.name ?? "No product"}</div>
       </div>
 
       <div className="information-display">

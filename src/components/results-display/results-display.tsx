@@ -1,18 +1,17 @@
 import { ProductInformation } from "./product-information/product-information.tsx";
-
-import "./results.-display.css";
 import { MoneyInput } from "./money-input/money-input.tsx";
 import { MoneyIn } from "./money-in/money-in.tsx";
-import { Change } from "./change/change.tsx";
+
+import "./results-display.css";
 
 export const ResultsDisplay = () => {
   return (
     <div className="result-display">
-      <ProductInformation />
+      <div className="responsive-results-container">
+        <ProductInformation />
 
-      <Change />
-
-      <MoneyIn />
+        <MoneyIn />
+      </div>
 
       <MoneyInput />
     </div>

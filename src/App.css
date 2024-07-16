@@ -1,15 +1,7 @@
 .machine-wrapper {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   width: 50vw;
   min-height: 50vh;
   border: 2px solid var(--border-color);
-  container-type: inline-size;
-  container-name: wrapper;
-}
-
-@media screen and (max-width: 1008px) {
-  .machine-wrapper {
-    flex-direction: column-reverse;
-  }
 }

@@ -6,6 +6,24 @@
   cursor: pointer;
   padding: 0.125rem;
   border-bottom: 2px solid transparent;
+
+  &:hover {
+    border-bottom: 2px solid var(--border-color);
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    &:hover {
+      border-bottom: 2px solid transparent;
+    }
+  }
+
+  &.selected {
+    color: coral;
+    border-bottom: 2px solid var(--border-color);
+  }
 }
 
 .loading-state {
@@ -14,22 +32,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.product:hover {
-  border-bottom: 2px solid var(--border-color);
-}
-
-.product.disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.product.selected {
-  color: coral;
-  border-bottom: 2px solid var(--border-color);
-}
-
-.product.disabled:hover {
-  border-bottom: none;
 }
