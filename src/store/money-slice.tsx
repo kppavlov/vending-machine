@@ -1,6 +1,6 @@
 import React, { createContext, ReactNode, useContext, useState } from "react";
 
-interface VendingMachineProductContextState {
+interface VendingMachineChangeContextState {
   totalAmount: number;
   change: number;
   addToTotalAmount: (amount: number) => void;
@@ -13,8 +13,8 @@ interface VendingMachineProvider {
   children: ReactNode;
 }
 
-const VendingMachineProductContext = createContext<
-  VendingMachineProductContextState | undefined
+const VendingMachineMoneyContext = createContext<
+  VendingMachineChangeContextState | undefined
 >({
   calculateChange: () => undefined,
   totalAmount: 0,
@@ -51,7 +51,7 @@ export const VendingMachineMoneyProvider: React.FC<VendingMachineProvider> = ({
   };
 
   return (
-    <VendingMachineProductContext.Provider
+    <VendingMachineMoneyContext.Provider
       value={{
         addToTotalAmount,
         totalAmount,
@@ -62,13 +62,13 @@ export const VendingMachineMoneyProvider: React.FC<VendingMachineProvider> = ({
       }}
     >
       {children}
-    </VendingMachineProductContext.Provider>
+    </VendingMachineMoneyContext.Provider>
   );
 };
 
 export const useMoney = () => {
-  const context = useContext(VendingMachineProductContext);
+  const context = useContext(VendingMachineMoneyContext);
   if (!context)
-    throw new Error("useTheme must be used within a VendingMachineContext");
+    throw new Error("useMoney must be used within a VendingMachineContext");
   return context;
 };

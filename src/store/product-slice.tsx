@@ -80,21 +80,11 @@ export const VendingMachineProductsProvider: React.FC<
   );
 };
 
-export const useVendingMachineDispatch = () => {
-  const context = useContext(VendingMachineProductsContext);
-  if (!context) {
-    throw new Error(
-      "useTheme must be used within a VendingMachineProductsContext",
-    );
-  }
-  return context;
-};
-
 export const useProduct = () => {
   const context = useContext(VendingMachineProductsContext);
   if (!context)
     throw new Error(
-      "useTheme must be used within a VendingMachineProductsContext",
+      "useProduct must be used within a VendingMachineProductsContext",
     );
   return context;
 };

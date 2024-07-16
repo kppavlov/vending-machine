@@ -31,7 +31,7 @@
         margin: 0.25rem;
       }
 
-      .column {
+      .denomination-count-column {
         display: flex;
         flex-direction: column;
         align-items: center;

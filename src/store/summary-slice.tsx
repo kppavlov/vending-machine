@@ -41,6 +41,6 @@ export const VendingMachineSummaryProvider: React.FC<
 export const useSummary = () => {
   const context = useContext(VendingMachineSummaryContext);
   if (!context)
-    throw new Error("useTheme must be used within a VendingMachineContext");
+    throw new Error("useSummary must be used within a VendingMachineSummaryContext");
   return context;
 };
