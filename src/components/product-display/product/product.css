@@ -21,7 +21,7 @@
   }
 
   &.selected {
-    color: coral;
+    color: var(--bg-color-cta);
     border-bottom: 2px solid var(--border-color);
   }
 }
