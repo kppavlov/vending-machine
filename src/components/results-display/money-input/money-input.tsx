@@ -20,7 +20,9 @@ export const MoneyInput = () => {
     useProduct();
   const [amountError, setAmountError] = useState(false);
 
-  const shouldDisableResetBtn = !selectedProduct && totalAmount === 0;
+  const shouldDisableResetBtn = totalAmount === 0;
+  const shouldDisableBuy =
+    !selectedProduct || selectedProduct.price > totalAmount;
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -51,7 +53,7 @@ export const MoneyInput = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="money-in-form information-display">
+    <form onSubmit={handleSubmit} className="information-display">
       <h3>Please add money to buy something</h3>
 
       {amountError && (
@@ -72,19 +74,21 @@ export const MoneyInput = () => {
         step={0.01}
       />
 
-      <button type="submit">Add money</button>
+      <div className="buttons-wrapper">
+        <button type="submit">Add money</button>
 
-      <button type="button" onClick={handleBuy} disabled={totalAmount <= 0}>
-        Buy
-      </button>
+        <button type="button" onClick={handleBuy} disabled={shouldDisableBuy}>
+          Buy
+        </button>
 
-      <button
-        type="button"
-        onClick={handleReset}
-        disabled={shouldDisableResetBtn}
-      >
-        Reset
-      </button>
+        <button
+          type="button"
+          onClick={handleReset}
+          disabled={shouldDisableResetBtn}
+        >
+          Reset
+        </button>
+      </div>
 
       <SummaryModal />
     </form>

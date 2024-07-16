@@ -10,7 +10,7 @@
 
   --text-color: rgba(255, 255, 255, 0.87);
   --bg-color-main: #242424;
-  --bg-color-cta: #009645;
+  --bg-color-cta: #ff7518;
   --border-color: rgba(255, 255, 255, 0.87);
   --error-color: orangered;
 
@@ -90,6 +90,14 @@ button {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .information-display {
+    .buttons-wrapper {
+      flex-direction: row;
+    }
+  }
+}
+
 @media screen and (max-width: 1200px) {
   body {
     font-size: 0.75rem;
@@ -116,6 +124,10 @@ button {
 @media screen and (max-width: 600px) {
   .product-display {
     padding: 0.25rem;
+  }
+
+  .information-display {
+    padding: 0.5rem;
   }
 
   input {
