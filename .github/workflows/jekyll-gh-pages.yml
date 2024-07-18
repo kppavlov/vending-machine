@@ -41,6 +41,8 @@ jobs:
         run: |
           npm install
           npm run build --if-present
+          echo "current working dir"
+          pwd
 
   # Deployment job
   deploy:
