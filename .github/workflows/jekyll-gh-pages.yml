@@ -43,6 +43,7 @@ jobs:
           npm run build --if-present
           echo "current working dir"
           pwd
+          ls
 
   # Deployment job
   deploy:
