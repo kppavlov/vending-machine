@@ -37,9 +37,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
             deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-            publish_dir: dist
-      - name: check cwd
-        run: |
-          pwd
-          ls
+            publish_dir: /home/runner/work/vending-machine/vending-machine/dist
       
