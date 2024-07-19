@@ -36,5 +36,5 @@ jobs:
       - name: deploy to gh-pages
         uses: bitovi/github-actions-react-to-github-pages@v1.2.4
         with:
-          path: dist
+          path: ./dist/
       
