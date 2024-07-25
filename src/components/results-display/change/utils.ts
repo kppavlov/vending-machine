@@ -1,4 +1,4 @@
-import { POSSIBLE_DENOMINATIONS } from "../../../constants.ts";
+import { POSSIBLE_DENOMINATIONS } from "@/constants.ts";
 import { initialDenominationsState } from "./constants.ts";
 
 export const getChangeInDenomination = (change: number) =>

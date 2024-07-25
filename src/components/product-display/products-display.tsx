@@ -3,17 +3,17 @@ import { useEffect } from "react";
 import "./products-display.css";
 
 // COMPONENTS
-import { ProductComponent } from "./product/product.tsx";
+import { ProductComponent } from "@/components/product-display/product/product.tsx";
 
 // HOOKS
-import { useProduct } from "../../store/product-slice.tsx";
-import { useMoney } from "../../store/money-slice.tsx";
+import { useProduct } from "@/store/product-slice.tsx";
+import { useMoney } from "@/store/money-slice.tsx";
 
 // TYPES
-import { Product } from "../../types.ts";
+import { Product } from "@/types.ts";
 
 // UTILS
-import { getProducts } from "../../api";
+import { getProducts } from "@/api";
 
 export const ProductsDisplay = () => {
   const { products, selectedProduct, setProducts, toggleSelectedProduct } =

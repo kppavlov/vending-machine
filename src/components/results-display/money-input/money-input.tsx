@@ -1,15 +1,17 @@
 import { FormEvent, useState } from "react";
 
 // HOOKS
-import { useMoney } from "../../../store/money-slice.tsx";
-import { useProduct } from "../../../store/product-slice.tsx";
-import { useSummary } from "../../../store/summary-slice.tsx";
+import { useMoney } from "@/store/money-slice.tsx";
+import { useProduct } from "@/store/product-slice.tsx";
+import { useSummary } from "@/store/summary-slice.tsx";
 
 // CONSTANTS
-import { POSSIBLE_DENOMINATIONS } from "../../../constants.ts";
+import { POSSIBLE_DENOMINATIONS } from "@/constants.ts";
 
 // COMPONENTS
-import { SummaryModal } from "../../summary-modal/summary-modal.tsx";
+import { SummaryModal } from "@/components/summary-modal";
+import { Button } from "@/components/shared/button";
+import { Input } from "@/components/shared/input";
 
 import "./money-input.css";
 
@@ -66,7 +68,7 @@ export const MoneyInput = () => {
         </>
       )}
 
-      <input
+      <Input
         className={`${amountError ? "error" : ""}`}
         name="money-amount"
         placeholder="Enter amount"
@@ -75,19 +77,19 @@ export const MoneyInput = () => {
       />
 
       <div className="buttons-wrapper">
-        <button type="submit">Add money</button>
+        <Button type="submit">Add money</Button>
 
-        <button type="button" onClick={handleBuy} disabled={shouldDisableBuy}>
+        <Button type="button" onClick={handleBuy} disabled={shouldDisableBuy}>
           Buy
-        </button>
+        </Button>
 
-        <button
+        <Button
           type="button"
           onClick={handleReset}
           disabled={shouldDisableResetBtn}
         >
           Reset
-        </button>
+        </Button>
       </div>
 
       <SummaryModal />

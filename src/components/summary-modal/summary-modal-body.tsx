@@ -1,5 +1,6 @@
 // COMPONENTS
 import { Change } from "../results-display/change/change.tsx";
+import { Button } from "../shared/button";
 
 // HOOKS
 import { useSummary } from "../../store/summary-slice.tsx";
@@ -20,9 +21,9 @@ export const SummaryModalBody = () => {
     <div className="summary-modal-body">
       <Change />
 
-      <button type="button" onClick={handleCloseModal}>
+      <Button type="button" onClick={handleCloseModal}>
         Close
-      </button>
+      </Button>
     </div>
   );
 };

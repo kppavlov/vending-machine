@@ -1,4 +1,4 @@
-import { Denominations } from "../../../types.ts";
+import { Denominations } from "@/types.ts";
 
 export const initialDenominationsState: Record<Denominations, number> = {
   "0.01": 0,

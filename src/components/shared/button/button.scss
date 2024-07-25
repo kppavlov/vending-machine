@@ -1,0 +1,15 @@
+.button {
+  color: var(--text-color);
+  min-width: 100px;
+  margin-top: 0.75rem;
+  background-color: var(--bg-color-cta);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  outline: none;
+  line-height: 24px;
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}

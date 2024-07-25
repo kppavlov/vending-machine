@@ -1,4 +1,4 @@
-import { useMoney } from "../../../store/money-slice.tsx";
+import { useMoney } from "@/store/money-slice.tsx";
 
 import "./money-in.css";
 

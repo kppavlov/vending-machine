@@ -1,5 +1,5 @@
-import { Denominations } from "../../../types.ts";
-import { useMoney } from "../../../store/money-slice.tsx";
+import { Denominations } from "@/types.ts";
+import { useMoney } from "@/store/money-slice.tsx";
 import { useMemo } from "react";
 import { getChangeInDenomination } from "../change/utils.ts";
 

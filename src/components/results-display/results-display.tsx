@@ -1,6 +1,6 @@
-import { ProductInformation } from "./product-information/product-information.tsx";
-import { MoneyInput } from "./money-input/money-input.tsx";
-import { MoneyIn } from "./money-in/money-in.tsx";
+import { ProductInformation } from "@/components/results-display/product-information/product-information.tsx";
+import { MoneyInput } from "@/components/results-display/money-input/money-input.tsx";
+import { MoneyIn } from "@/components/results-display/money-in/money-in.tsx";
 
 import "./results-display.css";
 
